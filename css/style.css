@@ -1,13 +1,8 @@
 /* !Centralizzazione Globale */
 :root {
-    --dimensioni-contenitori: 1080px;
-    --bordi: 2px dotted rgb(0, 0, 0);
-    --colore-contenuto-principale-blu: rgb(30,144,255);
-    --colore-contenuto-principale-rosa: rgb(255,192,203);
+    --dimensioni-contenitori: 1000px;
     --dimensioni-contenuto-principale-large: 60%; 
     --dimensioni-contenuto-principale-small: 40%;
-    --altezza-minima-contenuto-principale: 600px;
-    --colore-testo-header: rgb(255, 255, 255);
 }
 
 /* !Reset del Default */
@@ -17,32 +12,47 @@
     box-sizing: border-box 
 }
 
+/* Carattere scritta */
+body {
+    font-family: Whitney, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 /* !Utility */
 .flex {
     display: flex;
 }
 
+/* 3 Sezioni */
 .container {
     margin:30px 0;
     align-items: center;
     justify-content: center;
 }
 
+/* Tolgo sottolineatura ai link */
 a {
     text-decoration: none;
 }
 
+/* Colore testo bianco */
 .color-white {
     color: rgb(255, 255, 255);
 }
 
+/* Colore testo nero */
 .color-black {
     color: rgb(0, 0, 0);
 }
 
+/* Contenitore link */
 .box-link {
     padding: 10px;
     border-radius: 20px;
+}
+
+/* colore sfondo bianco */
+.back-white {
+    background-color: rgb(255, 255, 255);
 }
 
 /* Genitore Header */
@@ -55,54 +65,50 @@ a {
 .container-nav {
     justify-content: center;
     align-items: center;
-    max-width: var(--dimensioni-contenitori);
+    max-width: 1300px;
     margin: 0 auto;
     height: 80px;
 }
 
+/* Logo */
 .logo {
     height: 30px;
 }
 
-/* Link */
-.home-bar {
-    padding: 0 10px;
-}
-
-/* Figli del contenitore Nav */
+/* Figli del contenitore Nav Primario */
 .items-link {
     justify-content: center;
+    gap: 30px;
 }
- 
+
+/* larghezza Piccola */
 .small {
     width: 25%;
 }
 
+/* Larghezza Grande */
 .large {
     width: 50%;
-}
-
-.log-in {
-    background-color: rgb(255, 255, 255);
 }
 
 /* Foglio secondoario Header */
 .items-home {
     max-width: 600px;
     margin: 0 auto;
-    margin-top: 80px;
     text-align: center;
 }
 
 /* Figli della genitore .item-home */
 h1 {
     font-size: 50px;
+    margin-top: 40px;
 }
 
+/* Paragrafo Header */
 .home-paragraph {
-    padding-top: 20px;
+    padding-top: 15px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 /* Genitore dei Link di Download */
@@ -116,18 +122,16 @@ h1 {
     margin: 5px;
 }
 
+/* Link download Primario */
 .download {
     background-color: rgb(255, 255, 255);
     margin: 5px;
 }
 
+/* Link download Secondary */
 .download-discord {
     background-color: rgb(35,39,42);
     margin: 5px;
-}
-
-.space {
-    background-color: rgb(255, 255, 255);
 }
 
 /* Genitore flex Space */
@@ -138,18 +142,20 @@ h1 {
     width: var(--dimensioni-contenitori);
 }
 
-/* Figli del Genitore .flex-container-space */
+/* Testo delle Sezioni */
 .text-start {
     text-align: start;
     font-size: 40px;
 }
 
+/* Paragrafo delle Sezioni */
 .paragraph {
     margin-top: 20px;
     text-align: start;
 }
 
-.small-space {
+/* contenitore del testo */
+.text-small {
     width: var(--dimensioni-contenuto-principale-small);
 }
 
@@ -168,25 +174,12 @@ h1 {
     max-width: var(--dimensioni-contenitori);
 }
 
-.large-be {
-    width: var(--dimensioni-contenuto-principale-large);
-}
-
-/* Contenitore Fandom */
-.fandom {
-    background-color: rgb(255, 255, 255);
-}
-
 /* Genitore flex Fandom */
 .flex-container-fandom{
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: var(--dimensioni-contenitori);
-}
-
-.small-fandom {
-    width: var(--dimensioni-contenuto-principale-small);
 }
 
 /* Geniotre flex contact */
@@ -200,89 +193,83 @@ h1 {
 
 /* Figlio diretto di .flex-container-contact */
 .flex-items-contact {
-    max-width: var(--dimensioni-contenitori);
+    width: var(--dimensioni-contenitori);
     text-align: center;
 }
 
+/* Testo conteiner contatto */
 .text-center {
     font-size: 40px;
 }
 
+/* Titolo del container contatto */
 h3 {
     font-size: 30px;
     background-image: url(../img/stars.svg);
     margin-bottom: 40px;
 }
 
+/* Colore del link */
 .back-blu {
-    background-color: rgb(142,161,225);
-    
+    background-color: rgb(142,161,225);  
 }
-
-
-
-
-
-
-
 
 /* Genitore Footer */
 .main-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 500px;
     background-color: rgb(35,39,42);
 }
 
 /* Figlio del Genitore Footer e Padre dei item-resources*/
 .flex-container-resources {
     display: flex;
-    min-width: var(--dimensioni-contenitori);
-    border: var(--bordi);
+    max-width: var(--dimensioni-contenitori);
+    margin: 0 auto;
+    padding: 50px 0;
 }
 
-/* Figli del genitore .flex-container-resources */
-.flex-items-resources {
-    min-height: 400px;
+/* Titolo del footer */
+h4 {
+    font-size: 30px;
+    color: rgb(142,161,225);
 }
 
+/* Selezione di Nazionalità */
+#dropdown {
+    background-color: rgb(35,39,42);
+    color: rgb(255, 255, 255);
+    border: rgb(35,39,42);
+    padding: 3px;
+    margin: 10px 0;
+}
+
+/* Icone */
+.fa-brands {
+    padding: 5px;
+}
+
+/* Dimnesione del container a sinistra */
 .large-resources {
-    width: 40%;
-    background-color: rgb(240,128,128);
-    border-right: var(--bordi);   
+    width: 40%;  
 }
 
+/* Dimensione dei container in linea */
 .small-resources {
     width: 15%;
-    background-color: rgb(32,178,170);
-    border: 2px dotted rgb(255, 255, 255);
 }
 
-/* Genitore Footer Secondario */ 
-.secondary-footer {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    min-height: 80px;
-    background-color: rgb(35,39,42);
-    margin-top: 2px;
+/* Colore dei titili dei link*/
+.title-link {
+    color: rgb(142,161,225);
 }
 
-/* Figlio del foter secondario e padre dei Ites-Info */
+/* Figlio secondary del footer */
 .flex-container-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 60px;
-    min-width: var(--dimensioni-contenitori);
-    background-color: rgb(127,255,212);
+    max-width: var(--dimensioni-contenitori);
+    margin: 0 auto;
+    border-top: 2px solid rgb(255, 255, 255);
+    padding: 50px 0;
 }
 
-/* Figli di .flex-container-info */
-.flex-items-info {
-    min-height: 40px;
-    min-width: 80px;
-    background-color: rgb(255,182,193);
-    border: var(--bordi);
-}

@@ -1,12 +1,13 @@
 /* Centralizzazione Globale */
 :root {
-    --dimensioni-contenitori: 1000px;
+    --dimensioni-contenitori: 1080px;
     --bordi: 2px dotted rgb(0, 0, 0);
     --colore-contenuto-principale-blu: rgb(30,144,255);
     --colore-contenuto-principale-rosa: rgb(255,192,203);
     --dimensioni-contenuto-principale-large: 60%; 
     --dimensioni-contenuto-principale-small: 40%;
     --altezza-minima-contenuto-principale: 600px;
+    --colore-testo-header: rgb(255, 255, 255);
 }
 
 /*Reset del Default */
@@ -16,26 +17,55 @@
     box-sizing: border-box 
 }
 
-/* Genitore Header */
-.main-header {
+/* Utility */
+.flex {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80px;
-    background-color: rgb(173,216,230);
 }
 
-/* Figlio del Header e padre dei LINK*/
-.flex-container-nav {
-    display: flex;
-    min-width: var(--dimensioni-contenitori);
-    background-color: rgb(218,165,32);
-    border: var(--bordi);
+a {
+    text-decoration: none;
+}
+
+.color-white {
+    color: rgb(255, 255, 255);
+}
+
+.color-black {
+    color: rgb(0, 0, 0);
+}
+
+.box-link {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* Genitore Header */
+.main-header {
+    background-image: url(../img/jumbo.png);
+    background-size: cover;
+}
+
+/* Figlio Primario del Header e padre dei LINK */
+.container-nav {
+    justify-content: center;
+    align-items: center;
+    max-width: var(--dimensioni-contenitori);
+    margin: 0 auto;
+    height: 80px;
+}
+
+.logo {
+    height: 30px;
+}
+
+/* Link */
+.home-bar {
+    padding: 0 10px;
 }
 
 /* Figli del contenitore Nav */
-.flex-items-link {
-    min-height: 50px;
+.items-link {
+    justify-content: center;
 }
  
 .small {
@@ -44,27 +74,59 @@
 
 .large {
     width: 50%;
-    border-left: var(--bordi);
-    border-right: var(--bordi);
 }
 
-/* Gentiore Header secondario */
-.secondary-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 500px;
-    background-color: rgb(0,0,139);
+.log-in {
+    background-color: rgb(255, 255, 255);
 }
 
-/* Foglio del Header secondoario */
-.flex-items-home {
-    min-height: 400px;
-    min-width: 800px;
-    background-color: rgb(238,130,238);
-    border: var(--bordi);
-    border-radius: 4px;
+
+/* Foglio secondoario Header */
+.items-home {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 80px;
 }
+
+/* Figli della genitore .item-home */
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.home-paragraph {
+    padding-top: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Genitore dei Link di Download */
+.container-nav-secondary {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+/* Figli della Nav Secondary */
+.arrow {
+    margin: 5px;
+}
+
+.download {
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+}
+
+.download-discord {
+    background-color: rgb(35,39,42);
+    margin: 5px;
+}
+
+
+
+
+
+
+
 
 /* Contenitore space */
 .container-space {

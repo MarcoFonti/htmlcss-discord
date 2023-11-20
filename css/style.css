@@ -1,0 +1,241 @@
+/* Centralizzazione Globale */
+:root {
+    --dimensioni-contenitori: 1000px;
+    --bordi: 2px dotted rgb(0, 0, 0);
+    --colore-contenuto-principale-blu: rgb(30,144,255);
+    --colore-contenuto-principale-rosa: rgb(255,192,203);
+    --dimensioni-contenuto-principale-large: 60%; 
+    --dimensioni-contenuto-principale-small: 40%;
+    --altezza-minima-contenuto-principale: 600px;
+}
+
+/*Reset del Default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box 
+}
+
+/* Genitore Header */
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    background-color: rgb(173,216,230);
+}
+
+/* Figlio del Header e padre dei LINK*/
+.flex-container-nav {
+    display: flex;
+    min-width: var(--dimensioni-contenitori);
+    background-color: rgb(218,165,32);
+    border: var(--bordi);
+}
+
+/* Figli del contenitore Nav */
+.flex-items-link {
+    min-height: 50px;
+}
+ 
+.small {
+    width: 25%;
+}
+
+.large {
+    width: 50%;
+    border-left: var(--bordi);
+    border-right: var(--bordi);
+}
+
+/* Gentiore Header secondario */
+.secondary-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    background-color: rgb(0,0,139);
+}
+
+/* Foglio del Header secondoario */
+.flex-items-home {
+    min-height: 400px;
+    min-width: 800px;
+    background-color: rgb(238,130,238);
+    border: var(--bordi);
+    border-radius: 4px;
+}
+
+/* Contenitore space */
+.container-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    min-height: var(--altezza-minima-contenuto-principale);
+}
+
+/* Genitore flex Space */
+.flex-container-space{
+    display: flex;
+    border: var(--bordi);
+    min-width: var(--dimensioni-contenitori);
+}
+
+/* Figli del Genitore Space*/
+.flex-items-space {
+    min-height: 500px;
+}
+
+.large-space {
+    width: var(--dimensioni-contenuto-principale-large);
+    background-color: var(--colore-contenuto-principale-blu);
+}
+
+.small-space {
+    width: var(--dimensioni-contenuto-principale-small);
+    background-color: var(--colore-contenuto-principale-rosa);
+    border-left: var(--bordi);
+}
+
+/* Contenitore Be */
+.container-be {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(211,211,211);
+    min-height: var(--altezza-minima-contenuto-principale);
+}
+
+/* Genitore flex Be */
+.flex-container-be{
+    display: flex;
+    border: var(--bordi);
+    min-width: var(--dimensioni-contenitori);
+}
+
+/* Figli del Genitore Be */
+.flex-items-be {
+    min-height: 500px;
+}
+
+.large-be {
+    width: var(--dimensioni-contenuto-principale-large);
+    background-color: var(--colore-contenuto-principale-blu);
+}
+
+.small-be {
+    width: var(--dimensioni-contenuto-principale-small);
+    background-color: var(--colore-contenuto-principale-rosa);
+    border-right: 2px dotted rgb(0, 0, 0);
+}
+
+/* Contenitore Fandom */
+.container-fandom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    min-height: var(--altezza-minima-contenuto-principale);
+}
+
+/* Genitore flex Fandom */
+.flex-container-fandom{
+    display: flex;
+    border: var(--bordi);
+    min-width: var(--dimensioni-contenitori);
+}
+
+/* Figli del Genitore Fandom */
+.flex-items-fandom {
+    min-height: 500px;
+}
+
+.large-fandom {
+    width: var(--dimensioni-contenuto-principale-large);
+    background-color: var(--colore-contenuto-principale-blu);
+}
+
+.small-fandom {
+    width: var(--dimensioni-contenuto-principale-small);
+    background-color: var(--colore-contenuto-principale-rosa);
+    border-left: var(--bordi);
+}
+
+/* Geniotre flex contact */
+.flex-container-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1000px;
+    background-color: rgb(211,211,211);
+}
+
+/* Figlio diretto di .flex-container-contact */
+.flex-items-contact {
+    min-height: 900px;
+    min-width: var(--dimensioni-contenitori);
+    background-color: rgb(34,139,34);
+    border: var(--bordi);
+}
+
+/* Genitore Footer */
+.main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    background-color: rgb(35,39,42);
+}
+
+/* Figlio del Genitore Footer e Padre dei item-resources*/
+.flex-container-resources {
+    display: flex;
+    min-width: var(--dimensioni-contenitori);
+    border: var(--bordi);
+}
+
+/* Figli del genitore .flex-container-resources */
+.flex-items-resources {
+    min-height: 400px;
+}
+
+.large-resources {
+    width: 40%;
+    background-color: rgb(240,128,128);
+    border-right: var(--bordi);   
+}
+
+.small-resources {
+    width: 15%;
+    background-color: rgb(32,178,170);
+    border: 2px dotted rgb(255, 255, 255);
+}
+
+/* Genitore Footer Secondario */ 
+.secondary-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 80px;
+    background-color: rgb(35,39,42);
+    margin-top: 2px;
+}
+
+/* Figlio del foter secondario e padre dei Ites-Info */
+.flex-container-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    min-width: var(--dimensioni-contenitori);
+    background-color: rgb(127,255,212);
+}
+
+/* Figli di .flex-container-info */
+.flex-items-info {
+    min-height: 40px;
+    min-width: 80px;
+    background-color: rgb(255,182,193);
+    border: var(--bordi);
+}

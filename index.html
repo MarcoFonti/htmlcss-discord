@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Discord</title>
     <!-- LINK LOGO -->
-    <link rel="icon" href="img/logo.jpg">
+    <link rel="icon" href="img/icona.jpg">
     <!-- LINK CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,17 +13,33 @@
     <!-- Header Primario -->
     <header class="main-header">
         <!-- Figlio del Header -->
-        <nav class="flex-container-nav">
+        <nav class="flex container-nav">
             <!-- I figli della navbar -->
-            <div class="flex-items-link small"></div>
-            <div class="flex-items-link large"></div>
-            <div class="flex-items-link small"></div>
+            <img class="flex logo items-link small" src="img/logo.svg" alt="Logo Discord"">
+            <nav class="flex items-link large">
+                <a class="home-bar color-white" href="#">Scarica</a>
+                <a class="home-bar color-white" href="#">Perchè Discord</a>
+                <a class="home-bar color-white" href="#">Nitro</a>
+                <a class="home-bar color-white" href="#">Sicurezza</a>
+                <a class="home-bar color-white" href="#">Assistenza</a>
+            </nav>
+            <div class="flex items-link small">
+                <a class="log-in box-link color-black" href="#">Accendi</a>
+            </div>
         </nav>
-    </header>
-    <!-- Header Secondario -->
-    <header class="secondary-header">
-        <!-- Figlio del Header Secondario -->
-        <div class="flex-items-home"></div>
+        <div class="items-home">
+            <h1 class="color-white" >Il tuo posto per parlare</h1>
+            <p class="home-paragraph color-white">
+                Che tu faccia di un club scolastico, gruppo di gamer, 
+                communità artistica mondiale, 
+                o semplicemnte di un piccolo gruppo di amici che vuole passare il tempo assieme, 
+                Discord rende più facile chiacchere ogni giorno e ritrovi più spesso.
+            </p>
+            <nav class="container-nav-secondary">
+                <a class="download box-link color-black" href="#"><span class="arrow">&#8595;</span>Scarica per Mac</a>
+                <a class="download-discord color-white box-link" href="#">Apri Discord nel tuo browser</a>
+            </nav>
+        </div>
     </header>
     <!-- Contenitore Contenuto Principale -->
     <main class="main-container">

@@ -1,4 +1,4 @@
-/* Centralizzazione Globale */
+/* !Centralizzazione Globale */
 :root {
     --dimensioni-contenitori: 1080px;
     --bordi: 2px dotted rgb(0, 0, 0);
@@ -10,16 +10,22 @@
     --colore-testo-header: rgb(255, 255, 255);
 }
 
-/*Reset del Default */
+/* !Reset del Default */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box 
 }
 
-/* Utility */
+/* !Utility */
 .flex {
     display: flex;
+}
+
+.container {
+    margin:30px 0;
+    align-items: center;
+    justify-content: center;
 }
 
 a {
@@ -80,17 +86,16 @@ a {
     background-color: rgb(255, 255, 255);
 }
 
-
 /* Foglio secondoario Header */
 .items-home {
     max-width: 600px;
     margin: 0 auto;
     margin-top: 80px;
+    text-align: center;
 }
 
 /* Figli della genitore .item-home */
 h1 {
-    text-align: center;
     font-size: 50px;
 }
 
@@ -121,107 +126,67 @@ h1 {
     margin: 5px;
 }
 
-
-
-
-
-
-
-
-/* Contenitore space */
-.container-space {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.space {
     background-color: rgb(255, 255, 255);
-    min-height: var(--altezza-minima-contenuto-principale);
 }
 
 /* Genitore flex Space */
 .flex-container-space{
     display: flex;
-    border: var(--bordi);
-    min-width: var(--dimensioni-contenitori);
+    align-items: center;
+    justify-content: center;
+    width: var(--dimensioni-contenitori);
 }
 
-/* Figli del Genitore Space*/
-.flex-items-space {
-    min-height: 500px;
+/* Figli del Genitore .flex-container-space */
+.text-start {
+    text-align: start;
+    font-size: 40px;
 }
 
-.large-space {
-    width: var(--dimensioni-contenuto-principale-large);
-    background-color: var(--colore-contenuto-principale-blu);
+.paragraph {
+    margin-top: 20px;
+    text-align: start;
 }
 
 .small-space {
     width: var(--dimensioni-contenuto-principale-small);
-    background-color: var(--colore-contenuto-principale-rosa);
-    border-left: var(--bordi);
 }
 
 /* Contenitore Be */
 .container-be {
-    display: flex;
+    padding:30px 0;
     align-items: center;
     justify-content: center;
     background-color: rgb(211,211,211);
-    min-height: var(--altezza-minima-contenuto-principale);
 }
 
 /* Genitore flex Be */
 .flex-container-be{
     display: flex;
-    border: var(--bordi);
-    min-width: var(--dimensioni-contenitori);
-}
-
-/* Figli del Genitore Be */
-.flex-items-be {
-    min-height: 500px;
+    align-items: center;
+    max-width: var(--dimensioni-contenitori);
 }
 
 .large-be {
     width: var(--dimensioni-contenuto-principale-large);
-    background-color: var(--colore-contenuto-principale-blu);
-}
-
-.small-be {
-    width: var(--dimensioni-contenuto-principale-small);
-    background-color: var(--colore-contenuto-principale-rosa);
-    border-right: 2px dotted rgb(0, 0, 0);
 }
 
 /* Contenitore Fandom */
-.container-fandom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.fandom {
     background-color: rgb(255, 255, 255);
-    min-height: var(--altezza-minima-contenuto-principale);
 }
 
 /* Genitore flex Fandom */
 .flex-container-fandom{
     display: flex;
-    border: var(--bordi);
-    min-width: var(--dimensioni-contenitori);
-}
-
-/* Figli del Genitore Fandom */
-.flex-items-fandom {
-    min-height: 500px;
-}
-
-.large-fandom {
-    width: var(--dimensioni-contenuto-principale-large);
-    background-color: var(--colore-contenuto-principale-blu);
+    justify-content: center;
+    align-items: center;
+    max-width: var(--dimensioni-contenitori);
 }
 
 .small-fandom {
     width: var(--dimensioni-contenuto-principale-small);
-    background-color: var(--colore-contenuto-principale-rosa);
-    border-left: var(--bordi);
 }
 
 /* Geniotre flex contact */
@@ -229,17 +194,37 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 1000px;
     background-color: rgb(211,211,211);
+    padding: 50px 0;
 }
 
 /* Figlio diretto di .flex-container-contact */
 .flex-items-contact {
-    min-height: 900px;
-    min-width: var(--dimensioni-contenitori);
-    background-color: rgb(34,139,34);
-    border: var(--bordi);
+    max-width: var(--dimensioni-contenitori);
+    text-align: center;
 }
+
+.text-center {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+    background-image: url(../img/stars.svg);
+    margin-bottom: 40px;
+}
+
+.back-blu {
+    background-color: rgb(142,161,225);
+    
+}
+
+
+
+
+
+
+
 
 /* Genitore Footer */
 .main-footer {

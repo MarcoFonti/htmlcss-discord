@@ -65,7 +65,7 @@ a {
 .container-nav {
     justify-content: center;
     align-items: center;
-    max-width: 1300px;
+    min-width: var(--dimensioni-contenitori);
     margin: 0 auto;
     height: 80px;
 }
@@ -155,6 +155,10 @@ h1 {
 /* contenitore del testo */
 .text-small {
     width: var(--dimensioni-contenuto-principale-small);
+}
+
+.image.large {
+    width: var(--dimensioni-contenuto-principale-large);
 }
 
 /* Contenitore Be */
